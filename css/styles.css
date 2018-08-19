@@ -1,0 +1,26 @@
+/* Votre Style */
+body {
+	font-family: verdana, helvetica, arial, sans-serif;
+  background:  url(../img/squairy_light.png) repeat top left;
+}
+.grid > * > * {
+  background-clip: content-box;
+	font-family: verdana, helvetica, arial, sans-serif;
+}
+/*
+#main > div > div > div:nth-child(1) {
+  background-color: #008BDE;    
+}
+#main > div > div > div:nth-child(2) {
+  background-color: #3CACEE;    
+}
+#main > div > div > div:nth-child(3) {
+  background-color: #6BBEEE;    
+}
+#main > div > div > div:nth-child(4) {
+  background-color: #3CACEE;    
+}
+#main > div > div > div:nth-child(5) {
+  background-color: #008BDE;    
+}
+*/

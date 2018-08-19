@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if gt IE 9]> <!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <!--<![endif]-->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+		<title>English tasks &amp; mails manual | gorsini.free.fr</title>
+		<meta name="description" content="Tasks management in a thunderbird extension where tasks are linked to emails.">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="../css/knacss.css" media="all"/>
+    <link rel="stylesheet" href="../css/styles.css" media="all"/>
+		<meta name="revisit-after" content="1 day">
+</head>
+<body>
+	
+	<div id="main" role="main" class="pam">
+    <p>Tasks &amp; Mail - User Manual<span class="titre version">2.3.1 - March 24 2012</span></p>
+    
+    <h1> General description </h1>
+    <p>This extension allows you to manage tasks with the possibility of linking these tasks to messages. This extension works with Thunderbird 11.0. </p>
+    
+    <h1 id="Restrictions">Restrictions</h1>
+    <p>The tasks are locally stored on your computer (not on a remote server or Google).</br>The tasks can not be shared between many devices or many people.</br>Tasks managed with Tasks &amp; Mails are not in connection with Lightning.<br/>The extension is designed to work with POP account and it is not tested with IMAP account (but maybe it could work).</p>
+    
+    <h1 id="QuEstCeQUneTache"> What is a task? </h1>
+    
+    <p> A task has: </p>
+    <ul>
+      <li>a title, a description </li>
+      <li>a state
+        <ul>
+          <li>To do: task that must be carried out by oneself </li>
+          <li>To follow: that task is delegated. It requires monitoring </li>
+          <li>Waiting: task that is delegated or blocked. It does not really require monitoring </li>
+          <li>Done </li>
+          <li>Info: log information </li>
+        </ul>
+      </li>
+      <li>a priority from 0 (low / green) to 9 (high / red) through 5/blue </li>
+      <li>a link (0 to n) with messages </li>
+      <li>a folder </li>
+      <li>some dates
+        <ul>
+          <li>a creation date </li>
+          <li>a due date </li>
+          <li>and a completion date </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p>A task is linked to one or more messages. A message can be linked to one or more tasks. A task may be linked to no message. In this case, it is at least linked to a folder.</p>
+    
+    <h1 id="Interface"> Interface </h1>
+    <img class="illustration" src="img/screenshot_tasklist_en.png">
+    <p> The task list contains tasks of the current folder and sub-folders.</p>
+    
+    <p> The task list includes: </p>
+    <ul>
+      <li>an icon ( <img src="img/subfolder.png">) indicating whether the task is in a sub-folder </li>
+      <li>in icon ( <img src="img/link_mail.jpg">, <img src="img/link_mail_hilight.jpg">, <img src="img/link_mail_outside.jpg">, <img src="img/link_task.png">, <img src="img/link_task_grey.png">, <img src="img/link_task_hilight.png">) indicating whether the task is linked. See <a href="#LinkIcon">Link icons</a> </li>
+      <li>the state of the task </li>
+      <li>the priority of the task (value and color) </li>
+      <li>the title of the task </li>
+      <li>the creation date </li>
+      <li>the due date </li>
+      <li>the completion date </li>
+      <li>the name of the folder of the task </li>
+    </ul>
+    
+    <p>The list is refreshed on every change of current folder. The task list <b>can be hidden</b> using the splitter or <span class="shortcut">F9</span>.</p>
+    
+    <p>Each colum can be hide as the use decide except the title one. The columns can be reordered by darg &amp; drop. The list can be  sorted by clicking the header's columns. Only one column can be ordered at a time. The orderable columns are : </p>
+    <ul>
+      <li>priority, </li>
+      <li>state, </li>
+      <li>creation date </li>
+      <li>due date </li>
+      <li>and completion date. </li>
+    </ul>
+    
+    <p>The detail of a task is displayed at the right of the task list when creating or modifying a task. A <span class="shortcut">double-click</span> in the list opens the detail.</p>
+    
+    <p>Under the list of tasks, there is toolbar with a <b>system to filter tasks</b> by their states, folders scope and a textual search. See <a href="#Filters">Filters</a></p>
+    
+    <p>The list of messages contains an icon indicating whether the message is linked to a task.</p>
+    
+    <p>The quick-filter bar allows you to filter messages with linked tasks.</p>
+    
+    <h1 id="TaskOperation"> Task operations </h1>
+    <h2 id="CreateTask"> Create a task </h2>
+    <p> To create a task, use <span class="shortcut">menu 'File / New / <img src="img/taskmail_logo_menu.png">Add a task'</span>, fill in the details and click on button 'Save'. The task is attached to the current folder. </p>
+    
+    <h2 id="CreateTaskWithLink"> Create a task with link </h2>
+    <p> It is possible to create a task that is immediately linked to the selected message (<span class="shortcut">Shift-N</span>). This makes the task's detail visible if necessary.</p>
+    
+    <p> In this case, the <strong>task title</strong> is set from the <strong>message subject</strong> (if only one message is selected) and the <strong>task's decription</strong> is set from the current selection inside the message body.</p>
+    
+    <p>This can be achieved by <span class="shortcut">Drag &amp; Droping</span> a message or a selection made in the body of the message in the task list (back of the zone). </p>
+    
+    <h2 id="UpdateTask"> Edit a task </h2>
+    <img class="illustration" src="img/screenshot_detail_en.png">
+    <p> To view or edit a task, you can use menu <span class="shortcut">Edit / Update task</span> or <span class="shortcut">double click</span> (without saving). If the is detail already open, <span class="shortcut">double click</span> on the task close the detail.</p>
+    
+    <p>In the detail area, <span class="shortcut">Enter</span> and <span class="shortcut">Ctrl-Enter</span> in the description cause the save. <span class="shortcut">Shift-Escape</span> cancels. </p>
+    
+    <h2 id="DeleteTask"> Remove a task </h2>
+    <p> To delete a task, select one or more tasks, then use <span class="shortcut">menu Edit / Delete task</span> of the task list. Deleting a task, even if it is linked to a message, does not cause the deletion of message. </p>
+    
+    <h1 id="TaskDetail"> Tasks detail </h1>
+    <h2 id="States"> Task state </h2>
+    <p> A task has a state (to do, to follow, done). </p>
+    
+    <p> To change the status of a task, select the task, use menu <span class="shortcut">Edit / Update task</span>, change the state's task and <span class="shortcut">button Save</span>. It is possible to mark a task 'done' using <span class="shortcut">menu Tasks &amp; Mails / Mark as done</span> (<span class="shortcut">Shift-D</span>).</p>
+    
+    <p> States can be customized, see <a href="#Preferences">Preferences</a>.</p>
+    
+    <h2 id="Priority"> Task priority </h2>
+    <p> Tasks have a priority: 0 (low) to 9 (high). </p>
+    
+    <p> To change the priority, go into the task's detail, use <span class="shortcut">menu Tasks &amp; Mails / Change priority</span>. Prioritiy may also be incremented or decremented via <span class="shortcut">menu Tasks &amp; Mails / Change priotity / Increment Decrement</span> or <span class="shortcut">Ctrl-Alt Page_Up</span> and <span class="shortcut">Ctrl-Alt Page_Down</span>.</p>
+    
+    <p>The task list can be sorted by priority. See <a href="#Interface">Interface</a>.</p>
+    
+    <h2 id="Dates"> Task dates </h2>
+    <img class="illustration" src="img/screenshot_dates_en.png">
+    <p> The creation date is automaticaly set when the task is created and can not be modified.</p>
+    
+    <p> To set a date, check the corresponding checkbox. To clear a date, uncheck the corresponding checkbox.</p>
+    
+    <p> When the task’s state is change to ‘done’, the completion date is automaticaly set. When the completion date is set, the state is automaticaly set to ‘done’. Using <span class="shortcut">menu Tasks &amp; Mails / Mark as done</span> also set the completion date.</p>
+    
+    <p>Inside the tasks list, the color of the due date change when the task is overdue (red) or in the next seven days (orange). </p>
+    
+    <h1 id="Links"> Link operations </h1>
+    <h2 id="CreateLink"> Create a link </h2>
+    <p> You can create links between tasks and messages by selecting the desired tasks and messages and using <span class="shortcut">menu Tasks &amp; Mails / Link tasks and messages</span>. </p>
+    
+    <p> Links creation are possible between tasks and messages in any folder. You can link one task to many message and one message to many tasks but you can not link multiple messages to multiple tasks whit only one action. </p>
+    
+    <p> To <b>create link between differents folders</b>, tasks and messages to link only have to be visibles. To do this, it possible to stick the tasks list and change the current folder to see the rights messages. Conversely, when you see the right messages, you can use <span class="shortcut">contextual folderTree menu / See folder's tasks</span> to see the right tasks. See <a href="#StickyView">Sticky view</a>.</p>
+    
+    <p> Link creation by drag and drop: You can <span class="shortcut">drag and drop</span> one (or more) message(s) on a task or drag and drop one (or more) task(s) on a message. Drag &amp; Drop let you create a task if the drop is done on the task list (ut of a task). See <a href="#CreateTaskWithLink">Create a task with link</a> </p>
+    
+    <p>Use the links let you <b>group some messages</b> that are not in the same thread  (forwarded, abd use of reply). Linking them to a task and using the <a  href="#QuickFilterBar">quick-filter-bar</a>, you can easily view all the messages that are in the same context.</p> 
+    
+    <h2 id="LinkIcon"> The link icon </h2>
+    <p> In the task's list (and messages), an icon (<img src="img/link_mail.jpg">,<img src="img/link_mail_hilight.jpg">, <img src="img/link_mail_outside.jpg">, <img src="img/link_task.png">,<img src="img/link_task_grey.png">,<img src="img/link_task_hilight.png">) tells whether at least one connection exists. </p>
+    
+    <p>If the icon is red, it means that the task is related to the current message. If the icon is yellow <img src="img/link_mail_outside.jpg">, it seems that the task is linked to many folders. If the icon is grayed, this means that the message is linked to a task that is not visible due to current filters.</p>
+    
+    <p>When you select a task (or message), the icon of the message (or tasks) linked(s) goes red you can view them faster. If there is no icon, it means that the task was not linked to a message.</p>
+    
+    <h2 id="ShowLink"> Browse links </h2>
+    <p> From one task (or message), you can browse, in a loop, all linked messages. </p>
+    
+    <p> On a selected task (or message), use <span class="shortcut">menu Go / Go to next message(task)</span> or <span class="shortcut">Shift-L</span> or <span class="shortcut">mouse bouton</span> to shows the messages related. Run a second time, we go to the following message (or task), reach the last one, go back to the first one. </p>
+      
+    <p> Messages (or tasks) are <span style="font-weight: bold;">covered by the following order</span> :</p>
+    <ol>
+      <li>the visible messages, these ones in the current folder and this, by the link's cration date, </li>
+      <li>then the unvisible messages, these ones in a folder that is not the current one. </li>
+    </ol>
+    
+    <p>You can choose to <b>show automatically the linked message when you select a  task with mouse</b> and it is possible to choose, in the <a href="#Preferences">Preferences</a>,  with mouse buton (left or middle) make it (middle one by default). If you click a  second time one the task, you will see the next linked message.</p>
+    
+    <p>From a task, when you acces to linked messages, if the <b>next message to show is unvisible</b>, the current folder is changed. In this case, le scope is not modified even if it is <a href="#TransientView">transient</a>.</p>
+    
+    <p> From a message, when you acces to linked tasks, if the next
+      task to show is unvisible, the <strong>necessary is done to
+        make the task visibel</strong>. In ordre : </p>
+    <ol>
+      <li>change current folder, </li>
+      <li>change current viewed states, </li>
+      <li>reset search criteria </li>
+    </ol>
+    
+    <h2 id="StatusBar">Status bar</h2>
+    <img class="illustration" src="img/screenshot_statusbar.png">
+    <p> The <b>count of linked objects is shown in the status bar </b>under the
+      following pattern "Links : (a / b) + c" where : </p>
+    <ul>
+      <li>a = current object index,</li>
+      <li>b = count of visible objects,</li>
+      <li>c = count of unvisible objects. </li>
+    </ul>
+    
+    <p>Each time an object is selected, the status bar is refreshed.</p>
+    
+    <h2 id="SelectLink"> Select all linked messages </h2>
+    <p> To select all linked messages, select a task, then use <span class="shortcut">menu
+        Edit / Select / Select linked tasks (message)</span>. You can
+      select more than one task. Similarly, you can select all tasks
+      related to one or more messages. </p>
+    
+    <h2 id="DeleteLink"> Remove links </h2>
+    <p> To remove links, select the tasks and messages to unlink and use
+      <span class="shortcut">menu Tasks &amp; Mails / Unlink tasks and
+        messages</span> </p>
+    
+    <h1 id="Filters"> Filters </h1>
+    <img class="illustration" src="img/screenshot_filters_en.png">
+    <p>You can <strong>choose the visible tasks </strong>into the
+      task's list according to :and / or folder.</p>
+    <ul>
+      <li>their state </li>
+      <li>folder scope,</li>
+      <li>a text to search.</li>
+    </ul>
+    
+    <h2 id="ViewFolder"> Folder scope </h2>
+    <p>The <b>folder scope </b>can eut show : </p>
+    <ul>
+      <li>the tasks of the current folder, </li>
+      <li>the current folder + sub folders, </li>
+      <li>only tasks linked to the current message in any folder (a new
+        selection of message refreshes the current list view) </li>
+      <li>all folders (transient scope), </li>
+      <li><i>hot list</i>, important tasks in any folders (transient
+        folder). </li>
+    </ul>
+    
+    <p> The <b>text search </b>is done in the title and the description's task in case insensitive (no accents). The filter is transient as it desappers when you change folder except if you stick the filter.</p>
+    
+    <p> The <strong>status filter</strong> works by checking the  states we want to see. You can check all or only a single state.  The filter button shows the 1st selected state followed by '...'  if there are several selected states. If all states are selected  then the filter button reads 'All'. </p>
+    
+    <h2 id="TransientView"> Transient scope </h2>      
+    <p> Some <strong>folder scopes are transients</strong> ('all  folders', 'hot list') ie when you change folder, you leave this  scope to return to the previous one. For example, in scope 'all  folders',changing folder returns to scope 'subfolders'.</p>
+      
+    <p><b>A transient folder scope is leaved on a folder changing</b> (selecting a folder, <span class="shortcut">View folder's tasks</span>, <span class="shortcut">Go to folder</span>).  <span class="shortcut">Go to next message</span> does not leave the current scope.  So, if you are in 'all folders' and ask to see a linked message, the task view stay  the same.</p>
+    
+    <p>It is possible to choose in the <a href="#Preferences">Preferences</a>, if you want to use transient scope. If you <b>desactivate transient scope</b>, scopes will only be changed when you will ask it.</p>
+    
+    <h2 id="StickyView"> Sticky view </h2>
+    <img src="img/screenShot_taskmail_sticky.png" class="illustration"> <p>It is possible to <strong>stick view</strong>. Sticking works  on folder scope and on the current folder. So, the view stay the  same despite changing folder. Similarly, the view stay on a  transient scope.</p>
+    
+    <p><b>Sticking allows to make link between any folder</b> (viewing task  of a folder, stick view then change folder). Also, this allows  to keep indefinitely the scope 'all folders'.</p>
+    
+    <p> When the view is unstick, the task list is refreshed.</p>
+    
+    <p><b>A task is always created in the current folder</b> even ifthe view is sticky or the view show an other folder.</p> 
+    
+    <h2 id="FolderTreeIcon">FolderTree Icon</h2>
+    <img class="illustration" src="img/screenShot_taskmail_foldertree.png"> <p>When the view is sticked, a special icon appears in the  folderTree which allows to see current folder.</p>
+    
+    <h2 id="ViewTasksFolder">Changing view keeping folder</h2>
+    <p>It is possible to <strong>change the folder that it is viewed  in the task list without changing folder</strong> and thus the  messages in visualization. You have to use <span class="shortcut">folderTree  contextual menu / See all folder tasks to do so.</span> This make possible    to create link between any folders.</p>
+    
+    <h1 id="QuickFilterBar"> Quick filter bar </h1>
+    <img class="illustration" src="img/screenshot_quickfilterbar.png">
+    <p> You can filter the message's list so: </p>
+    <ul>
+      <li>display only messages that have at least one link with any task </li>
+      <li>display only messages that are linked with the selected tasks. In this mode, if no task is selected, all messages with links are displayed. The message's list is refreshed on task selection
+      </li>
+      <li>it is possible to switch between viewing messages or threads containing messages </li>
+    </ul>
+    
+    <p> Sticky mode remembers the filter settings when changing folders. When Thunderbird restarts the sub-filtering is lost</p>
+    
+    <h1 id="Moves"> Moving tasks and messages </h1>
+    <p> <b>Basic rule : When a message moves, lined tasks move. Otherwise NO.</b> </p>
+    
+    <p> <u>Definition</u>: </p>
+    <ul>
+      <li>a <strong>link is direct </strong>when a task is linked to a message that is in the same folder that the task,</li>
+      <li>a <b>link is indirect</b> when a task is linked to a message that is in an other folder that this one of the task.
+      </li>
+    </ul>
+    
+    <h2 id="TaskMoves"> Moving tasks </h2>
+    <p>You can move a task (or many) in another folder using <span class="shortcut">menu Tasks &amp; Mails / Move to ...</span> or <span class="shortcut">drag &amp; drop</span> the task.</p>
+    
+    <p> <strong>Moving a task with link </strong>is possible and the  task stay linked to its messages. Although, the links become  indirect.</p>
+    
+    <h2 id="MessageMoves"> Moving messages </h2>
+    <p>Moving a message, when it is linked to tasks, causes the move of  the tasks and the message remains linked to tasks. Although,  moving a message move only b>tasks  that are directly linked and only these ones</b>. Tasks  that are in other folders stay where they are and linked to  messages that you have moved.</p>
+    
+    <h2 id="Divers"> Miscellaneous </h2>
+    <p> Deleting a message, causes the removal of directly linked  tasks. Indirect linked tasks are not impacted. If the message is  put in the Trash, the tasks are also put into the Trash.</p>
+    
+    <p>Delete a task does not impact linked messages.</p>
+    
+    <p>Moving a folder retains the tasks and messages links.</p>
+    
+    <p>Deleting a folder causes cascade deletion of the associated tasks. </p>
+    
+    <p>Renaming a folder does not impact the tasks.</p>
+    
+    <p>It is impossible to undo a task displacement.</p>
+    
+    <h1 id="Preferences"> Preferences </h1>
+    <img class="illustration" src="img/screenshot_taskmail_pref_states.png" width="350px">
+    <p>It is possible to choose which mouse button make  
+    <span class="shortcut">Go to nxt message</span>.</p>
+    
+    <p>It is possible to desactivate transient scope.</p>
+    
+    <p> The state's list and task's report can be modified by the user via the Preferences.</p>
+    
+    <p>The states order is modified. Please note that deleting a state  does not check if the state is in use. It is impossible to  delete the 'done' state. 'Done' may be renamed but must keep its  meaning. </p>
+    
+    <h1 id="TasksReport"> Task Report </h1>
+    <p> The task's report generates a message with all tasks meeting the active filters and active sort.</p>
+    
+    <p>The report can be customized in the Preferences.</p>
+    
+    <p>The template is based on the HTML source into which keywords are replaced by values.</p>
+    
+    <p>The template is built on the following information: </p>
+    <ul>
+      <li>#TASK_TITLE#, #TASK_PRIO#, #TASK_STATE# and #TASK_DESC# are replaced by the information of a task, </li>
+      <li>#TASK_CREATION_DATE#, #TASK_DUE_DATE# et #TASK_COMPLETION_DATE  are replaced by the dates of a task, </li>
+      <li>#FOLDER_NAME# is replaced by the name of the folder of a task. </li>
+    </ul>
+    
+    <p>The template contains tags that define the objects to display:</p>
+    <ul>
+      <li>#FOLDER# defines a folder. A folder is composed of tasks and sub folders. (start and end as in XHTML) </li>
+      <li>#TASK# delimited task. (start and end as in XHTML) </li>
+      <li>#SUB_FOLDERS# are sub folders </li>
+    </ul>
+    Example template with the tasks in a tree
+    <pre>Weekly Report
+    &lt;ul&gt; 
+    #FOLDER#
+    &lt;li&gt;#FOLDER_NAME#&lt;/li&gt;
+    &lt;ul&gt;
+    #TASK#&lt;li&gt;
+    #TASK_TITLE# (&lt;tt&gt;#TASK_PRIO#&lt;/tt&gt;) &lt;b&gt;#TASK_STATE#&lt;/b&gt;     
+    #TASK_CREATION_DATE# &lt;u&gt;#TASK_DUE_DATE#&lt;/u&gt; #TASK_COMPLETION_DATE# 
+    &lt;i&gt;#TASK_DESC#&lt;/i&gt;
+    &lt;/li&gt;#TASK#
+    #SUB_FOLDERS#
+    &lt;/ul&gt; 
+    #FOLDER#
+    &lt;/ul&gt; 
+    Thank you for taking notice.
+    </pre>
+    <p> Another example of a template with all tasks at the same level: </p>
+    <pre>Weekly Report
+    &lt;ul&gt;
+    #FOLDER#
+    #TASK#&lt;li&gt;
+    #TASK_TITLE#(&lt;tt&gt;#TASK_PRIO#&lt;/tt&gt;)#TASK_STATE#
+    #TASK_DESC#
+    &lt;/li&gt;#TASK#
+    #SUB_FOLDERS#
+    #FOLDER#
+    &lt;/ul&gt;
+    Thank you for taking notice.
+    </pre>
+    
+    <h1 id="Backups"> Backup </h1>
+    <p>The tasks are stored in a sqlite database. This database named tasks.sqlite is present on the computer in the directory thunderbird.user.home.
+    <table>
+            <tr>
+                    <td>Under <b>Windows XP</b></td>
+                    <td>it's placed under the directory <span
+                    style="font-family:monospace">[documents and settings\user]\application
+                            data\thunderbird\profiles\[user]\tasks.sqlite.</span></td>
+            </tr>
+            <tr>
+                    <td>Under <b>Windows Seven</b></td>
+                    <td>it is placed under <span style="font-family:monospace">[OS drive]\Users\[user]\AppData\Roaming\Thunderbird\Profiles\[user]\tasks.sqlite.</span></td>
+            </tr>
+    </table></p>
+                      
+    <p>During an extension's upgrade, if a database's upgrade is  required, a backup is performed automatically in the user.home            directory (<span style="font-family:monospace">tasks.sqlite.backup.1</span>).</p>
+                      
+    <p>A database backup can be performed using MozBackup 1.4.8 version. </p>
+	</div>
+	<div id="footer" role="contentinfo" class="line txtcenter smaller mas">
+		<a href="../">Gilles ORSINI</a>
+	</div>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30461573-1']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+</body>
+</html>

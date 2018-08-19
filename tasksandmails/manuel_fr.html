@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <![endif]-->
+<!--[if gt IE 9]> <!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> <!--<![endif]-->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+		<title>Manuel tasks &amp; mails français | gorsini.free.fr</title>
+		<meta name="description" content="Tasks management in a thunderbird extension where tasks are linked to emails.">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="../css/knacss.css" media="all"/>
+    <link rel="stylesheet" href="../css/styles.css" media="all"/>
+		<meta name="revisit-after" content="1 day">
+</head>
+<body>
+	
+	<div id="main" role="main" class="pam">
+    <p class="titre"> Tasks &amp; mails - Manuel utilisateur<br/>
+    <span class="titre version">2.3.1 - 24 Mars 2012</span></p>
+    
+    <h1 id="DecriptionGenerale"> Description générale </h1>
+    <p> Cette extension permet de gérer des tâches avec la possibilité  de lier ces tâches aux messages. Cette extension fonctionne avec  Thunderbird 11.0. </p>
+    
+    <h1 id="Restrictions">Restrictions</h1>
+    <p>Les tâches sont stockées en local sur l'ordinateur  (et pas sur un serveur distant voir Google).</br>  Les tâches ne peuvent pas être partagées entre plusieurs  ordinateurs ou plusieurs personnes.</br>  Les tâches gérées avec Tasks &amp; Mails sont sans relation avec  Lightning.<br/>  L'extension est prévue pour fonctionner avec des comptes POP  et elle n'est pas testée avec des comptes IMAP (mais il est  possible que cela fonctionnement correctement).</p>
+    
+    <h1 id="QuEstCeQUneTache"> Qu'est-ce qu'une tâche ? </h1>
+    <p> Une tâche a : </p>
+    <ul>
+      <li>un titre, un descriptif, </li>
+      <li>un état
+        <ul>
+          <li>à faire : tache qui doit être faite par soi même </li>
+          <li>à suivre : tâche qui est délégué. Elle nécessite un  suivi </li>
+          <li>attente : tâche qui est délégué ou bloqué. Elle nedmj
+          <li>fait, </li>
+          <li>info, pour consigner des informations. </li>
+        </ul>
+      </li>
+      <li>une priorité de 0 (basse/vert) à 9 (haute/rouge) en passant  par 5 (bleu) </li>
+      <li>des liens (0 à n) avec des messages </li>
+      <li>un folder de rattachement </li>
+      <li>des dates date de création une date d'échéance et une date    de réalisation </li>
+    </ul>
+    
+    <p> Une tache est liée à un ou plusieurs messages. Un message peut  être lié à une ou plusieurs tâches. Une tâche peut être liée à  aucun message. Dans ce cas, elle est au moins liée à un folder.</p>
+    
+    <h1 id="Interface"> Interface </h1>
+    <img class="illustration" src="img/screenshot_tasklist_en.png">
+    <p> La liste des tâches contient les tâches du folder courant et  des sous-folders. La liste des tâches contient : </p>
+            <ul>
+              <li>un icône ( <img src="img/subfolder.png">) signalant si la  tâche est en dehors du courant, </li>
+              <li>un icône ( <img src="img/link_mail.jpg">, <img src="img/link_mail_hilight.jpg">,  <img src="img/link_mail_outside.jpg">, <img src="img/link_task.png">,  <img src="img/link_task_grey.png">, <img src="img/link_task_hilight.png">)  signalant si la tâche est liée. Voir <a href="#LinkIcon">icône              de liaison</a>, </li>
+              <li>l'état de la tâche, </li>
+              <li>la priorité de la tâche (valeur et couleur), </li>
+              <li>le titre de la tâche, </li>
+              <li>la date de création, </li>
+              <li>la date d'échéance, </li>
+              <li>la date de réalisation </li>
+              <li>et le nom du folder de la tâche. </li>
+            </ul>
+    
+    <p> La liste est rafraîchie à chaque changement de folder. Elle  peut être <b>masquée</b> en utilisant le splitter ou <span class="shortcut">F9</span>.</p>
+    
+    <p> Les colonnes qui sont affichées peuvent être choisies et seule  la colonne titre ne peut être masquée. L'ordre des colonnes peut  être changé. La liste peut être triée en cliquant sur le titre  de la colonne. Une seule colonne est triée à la fois. Lescolonnes triables sont : </p>
+      <ul>
+        <li>priorité, </li>
+        <li>état, </li>
+        <li>date de création, </li>
+        <li>date d'échéance, </li>
+        <li>et date de réalisation. </li>
+      </ul>
+    
+    <p> Le détail d'une tâche s'affiche à droite de la liste des  tâches lorsque l'on crée ou modifie une tâche. Un <span class="shortcut">doucle-clic</span>  dans la liste ouvre le détail. </p>
+    
+    <p> Au-dessus de la liste de tâches, il y a un <b>système pour  filtrer les tâches</b> selon leur état, un périmètre de  folders et une recherche textuelle. Voir <a href="#Filters">LesFiltres</a>. </p>
+    
+    <p> La liste des messages contient un icône signalant si le message est lié à une tâche. </p>
+    
+    <p> La quick-filter-bar permet de filtrer les messages ayant des tâches associées. </p>
+    
+    <h1 id="TaskOperation"> Opération sur les tâches </h1>
+    <h2 id="CreateTask"> Créer une tâche </h2>
+    <img class="illustration" src="img/screenshot_detail_en.png">
+    <p> Pour créer une tâche, utiliser <span class="shortcut">menu  Fichier / Nouveau / <img src="img/taskmail_logo_menu.png">Ajouter  une tâche</span>, remplissez le détail et 'bouton Sauver'. La  tâche est rattachée au folder courant. </p>
+    
+    <h2 id="CreateTaskWithLink"> Créer une tâche avec lien </h2>
+    <p> Il est possible de créer une tâche qui soit tout de suite liée  à (aux) message(s) sélectionné(s) ( <span class="shortcut">Shift-N</span>).  Cela rend visible la liste de tâche si nécessaire. </p>
+    
+    <p> Dans ce cas, le <strong>titre de la tâche</strong> est  récupéré du <b>sujet du message</b> (si un seul message est  sélectionné) et le <strong>descriptif de la tâche</strong> est  récupéré de la partie actuellement sélectionnée dans le <strong>corpsdu message</strong>. </p>
+    
+    <p> Cela peut-être réalisé en <span class="shortcut">Drag &amp;  Dropant</span> un message ou une sélection faite dans le corps  du message dans la liste de tâche (fond de la zone). </p>
+    
+    <h2 id="UpdateTask"> Modifier une tâche </h2>
+    <p> Pour consulter ou modifier une tâche, on peut utiliser <span  class="shortcut">menu Edition / Modifier une tâche</span> ou <span  class="shortcut">double click</span> (sans sauver). Si le  détail est ouvert, <span class="shortcut">double click</span>,  referme de détail. Dans la zone détail d'une tâche, <span class="shortcut">Entrée</span>  et <span class="shortcut">Ctrl-Entrée</span> dans le descriptif  provoquent la sauvegarde. <span class="shortcut">Shift-Escape</span> annule  la sauvegarde. </p>
+      
+    <h2 id="DeleteTask"> Suppression de tâche </h2>
+    <p> Pour supprimer une tâche, sélection d'un ou des tâches, puis <span  class="shortcut">menu Edition / Supprimer une tâche</span> de  la liste de tâches. La suppression d'une tâche, même si elle est  liée à un message, ne provoque pas la suppression du message. </p>
+    
+    <h1 id="TaskDetail"> Détail d'une tâche </h1>
+    <h2 id="States"> Les états </h2>
+    <p> Une tâche possède un état (à faire, à suivre, fait). </p>
+    
+    <p> Pour changer l'état d'une tâche, sélectionner la tâche, <span  class="shortcut">menu Edition / Modifier une tâche</span>,  changer l'état et <span class="shortcut">bouton Sauver</span>.  Il est possible de marquer une tâche à 'fait' via <span class="shortcut">menu  Tasks &amp; Mails / Marquer comme fait</span>( <span class="shortcut">Shift-D</span>).  La date de réalisation de la tâche est automatiquement  positionnée à la date du jour. </p>
+    
+    <p> Les états peuvent être personnalisés. Voir <a href="#Preferences">Préférences</a>.</p>
+    
+    <h2 id="Priority"> Les priorités </h2>
+    <p> Une tâche possède une priorité : 0(basse) à 9(haute). Pour  changer une priorité, <span class="shortcut">menu Edition /  Modifier une tâche</span> pour consulter le détail de la tâche  ou <span class="shortcut">menu Tasks &amp; Mails / Changer la  priorité</span>. Les priorités peuvent également être  incrémentées ou décrémentées via <span class="shortcut">menu  Tasks &amp; Mails / Changer la priorité / Incrémenter  Décrémenter</span> ou <span class="shortcut">Ctrl-Alt Page_Up</span> et  <span class="shortcut">Ctrl-Alt-Page_Down</span>. La liste des  tâches est triable par priorité. Voir <a href="#Interface">Interface</a>.</p>
+    
+    <h2 id="Dates"> Les dates </h2>
+    <img class="illustration" src="img/screenshot_dates_en.png">
+    <p> La date de création est positionnée lors de la création de la  tâche et ne peut être modifiée. </p>
+    
+    <p> Pour positionner une date, il faut au préalable cocher la case  correspondante. Pour supprimer une date, il faut décocher lacase correspondante. </p>
+    
+    <p> Lorsque l'état de la tâche est modifié en 'fait', la date de  réalisation est automatiquement positionnée. Inversement,  lorsque l'on positionne la date de réalisation, l'état de la  tâche passe automatiquement à 'fait'. L'utilisation de <span class="shortcut">menu  Tasks &amp; Mails / Marquer comme fait</span> positionneégalement la date de réalisation. </p>
+    
+    <p> Dans la liste de tâche, la couleur de la date d'échéance  change si la tâche est en retard (rouge) ou imminente (orange)  dans les 7 prochains jours. </p>
+    
+    <h1 id="Links"> Les liens </h1>
+    <h2 id="CreateLink"> Créer des liens </h2>
+    <p> On peut créer et supprimer des liens entre tâches et messages  en sélectionnant les tâches et messages désirés et en utilisant  <span class="shortcut">menu Tasks &amp; Mails / Lier tâches et    messages</span>. </p>
+    
+    <p> Les liaisons sont possible entre tâche et messages quelque  soit les folders. On peut lier 1 tâche à plusieurs messages et  une message à pluiseurs tâches à la fois mais on ne peut pas  lier plusieurs messages à plusieurs tâches d'un seul coup. </p>
+    
+    <p> Pour <b>créer des liens entre des folders différents</b>, il  suffit que les messages et tâches à lier soient visibles. Pour  cela, il est possible de bloquer la liste de tâches et changer  le folder pour visualiser les bons messages. Inversement,  lorsqu'on visualise les bons messages, on peut utiliser <span class="shortcut">menu  contextuel du folderTree / Voir les tâches de ce folder</span>  pour voir les bonnes tâches. Une fois les objets visibles, il  suffit de créer normalement les liens. Voir <a href="#StickyView">Blocage    de vue</a>. </p>
+    
+    <p> Création de lien par drag &amp; drop : on peut <span class="shortcut">drag  &amp; droper</span> un(ou des) message(s) sur une tâche ou drag  &amp; droper une (ou des) tâche(s) sur un message. Le Drag &amp;  Drop permet de créer une tâche si le lâché est réalisé dans la  liste de tâche mais en dehors d'une tâche. Voir <a href="#CreateTaskWithLink">Créer    une tâche liée au message courant</a> </p>
+    
+    <p>L'utilisation des liens vous donne également <b>la possibilité de regrouper des messages</b> qui ne sont pas forcement dans la même discussion (forward, mauvais utilisation des reply). En les liant à une tâche unique et en utilisant le <a href="#QuickFilterBar">filtrage</a>, vouspourrez facilement voir tous messages qui ont lieu d'être regroupés.</p> 
+    
+    <h2 id="LinkIcon"> L'icône de liaison </h2>
+    <p> Dans les listes de tâches (et de messages), un icône ( <img src="img/link_mail.jpg">,  <img src="img/link_mail_hilight.jpg">, <img src="img/link_mail_outside.jpg">,  <img src="img/link_task.png">, <img src="img/link_task_grey.png">,  <img src="img/link_task_hilight.png">) précise si au moins une  liaison existe. </p>
+    
+    <p> Si l’icône est rouge, cela signifie que la tâche (ou le  message) est liée à au message courant. Si l’icône est jaune <img  src="img/link_mail_outside.jpg"> cela signifie que la tâche  est liée à plusieurs folders. Si l'icône est grisé <img src="img/link_task_grey.png">,  cela signifie que le message est lié à une tâche invisible à  cause des filtres courants. </p>
+    
+    <p> Lorsque vous sélectionnez une tâche (ou un message), l’icône  des messages liés passe donc au rouge vous permettant de les  visualiser plus rapidement. S'il n'y a pas d’icône, cela  signifie que la tâche n'a pas de lien avec un message. </p>
+    
+    <h2 id="ShowLink"> Parcourir les liens </h2>
+    <p> Depuis une tâche (ou un message), on peut parcourir, en boucle, tous les messages liés. </p>
+      
+    <p> Sur une tâche (ou un message), <span class="shortcut">menu Aller / Aller au message suivant</span> ou <span class="shortcut">Shift-L</span> ou <span class="shortcut">bouton de la souris</span> montre les messages liés. Exécuté une deuxième fois, on passe au message (ou tâche) suivant, arrivé audernier, on repasse au 1°. </p>
+      
+    <p> Les messages (ou  tâches) sont <b>parcourus selon l'ordre suivant</b> : </p>
+    <ol>
+      <li>les messages visibles c'est-à-dire ceux dans le folder
+        courant et ce dans l'ordre de création des liens, </li>
+      <li>puis les messages invisibles c'est-à-dire dans un autre
+        folder que le folder courant. </li>
+    </ol>
+    
+    <p>On peut demander à ce que les messages liés soient <b>immédiatemeent montrés dès qu'on sélectionne une tâche avec la souris</b> et il est possible de choisir dans les <a href="#Preferences">Preferences</a> quel bouton (gauche ou milieu) utilisé (<span class="shortcut">bouton du milieu</span> par défaut).Si vous recliquez une deuxième fois sur la tâche, vous passez au message suivant.</p>
+    
+    <p> Lorsque l'on accède aux messages liées à une tâche, si le  <b>prochain message à visualiser est invisible</b>, le folder est  changé. Dans ce cas, le périmétre de folders n'est pas  modifié même s'il est <a href="#TransientView">temporaire</a>.</p>
+    
+    <p> Lorsque l'on accède aux tâches liées à un message, si la  prochaine tâche à visualiser n'est pas visible, le <b>nécessaire    est fait pour rendre la tâche visible</b>. Dans l'ordre : </p>
+    <ol>
+      <li>changer le folder en cours de visualisation, </li>
+      <li>rajouter les état nécessaires, </li>
+      <li>annule la recherche textuelle. </li>
+    </ol>
+    
+    <h2 id="StatusBar"> Barre d'état </h2>
+    <img class="illustration" src="img/screenshot_statusbar.png">
+    <p> Le <b>nombre d’objets liés est indiqué dans la barre d'état</b> sous la forme "Liens : (a / b) + c" où : </p>
+    <ul>
+      <li>a = indice de l'objet courant </li>
+      <li>b = nombre d'objet liés visibles </li>
+      <li>c = nombre d'objets liés invisibles. </li>
+    </ul>
+    <p>A chaque fois qu'un objet est sélectionné, la barre d'état est remise à jour.</p>
+    
+    <h2 id="SelectLink"> Sélectionner tous les messages liés </h2>
+    <p> Pour sélectionner tous les messages (ou tâches) liés,  sélectionner un ou des tâches, puis <span class="shortcut">menu  Edition / Sélectionner / Sélectionner les tâches(messages)    liées</span>. Vous pouvez sélectionner plusieurs messages. </p>
+    
+    <h2 id="DeleteLink"> Supprimer des liens </h2>
+    <p> Pour supprimer des liens, sélectionner les tâches et messages  à délier et <span class="shortcut">menu Tasks &amp; Mails /    Délier tâches et messages</span>. </p>
+    
+    <h1 id="Filters"> Les filtres </h1>
+    <img class="illustration" src="img/screenshot_filters_en.png">
+    <p> Il est possible de <b>choisir les tâches visibles</b> dans la liste selon : </p>
+    <ul>
+      <li>leur état </li>
+      <li>un périmètre de folders </li>
+      <li>un texte à rechercher. </li>
+    </ul>
+    
+    <h2 id="ViewFolder"> Périmètrede folders </h2>
+    <p> Le <b>périmètre de folders</b> peut montrer : </p>
+    <ul>
+      <li>les tâches du folder en cours, </li>
+      <li>le folder en cours + les sous folders, </li>
+      <li>uniquement les tâches liées au message courant dans n'importe quel folder (le changement du message courant rafraîchit la liste), </li>
+      <li>tous les folders (périmètre temporaire), </li>
+      <li>la <i>hot list</i>, les tâches importantes prises dans tous les folders (périmètre temporaire). </li>
+    </ul>
+    
+    <p> La <b>recherche textuelle </b> est faite sur le titre ou la  description des tâches en mode case insensitive mais accent  sensitive. Ce filtre est temporaire c'est-à-dire qu'il disparaît  lorsque l'on change de folder sauf si on bloque le filtre. </p>
+    
+    <p> Le <b>filtre d'état</b> fonctionne en cochant les états que  l'on souhaite voir. On peut tous les cocher ou uniquement un  seul état. Le bouton de filtrage contient le 1° état suivi de  ',...' s'il y a plusieurs états sélectionnés. Si tous les états  sont sélectionnés alors le bouton de filtrage est libellé  'Tous'. </p>
+      
+    <p>La <b>vue et son blocage sont conservés</b> après un redémarrage de Thunderbird.</p>
+    
+    <h2 id="TransientView"> Périmètre temporaire </h2>
+    <p> Certains <b>périmètre de folders sont temporaires</b> ('tous  les folders', 'hot lits') c'est à dire que lorsqu'on change de  folder on quitte ce périmètre pour repasser dans le précédent.  Par exemple, en périmètre 'Tous les folders', un changement de  folder refera passer en périmètre 'subfolders'.</p>
+      
+    <p><b>Un périmètre temporaire est quitté sur un changement de folder</b> (soit en  sélectionnant le folder soit en utilisant <span  class="shortcut">voir les tâches du folder</span> soit  en utilisant <span class="shortcut">aller au folder</span>). <span  class="shortcut">Aller au message suivant</span> ne quitte pas  le périmètre courant. Ainsi, si vous êtes dans le périmétre 'tous les folders' et  demander à voir un message lié, la liste des tâches reste identique.</p> <p>Il est possible de choisir dans les <a href="#Preferences">préférences</a>, si on souhaite utiliser les périmétres temporaires. Si on <b>désactive les périmètrestemporaires</b>, le périmètre ne sera changer que lorsque l'utilisateur le demandera.</p>
+    
+    <h2 id="StickyView"> Blocage de vue </h2>
+    <img src="img/screenShot_taskmail_sticky.png" class="illustration">
+    <p> Il est possible de <b>bloquer la vue</b>. Le blocage joue sur  le périmètre de folders et le folder en cours de visualisation.  Ainsi, la vue reste la même malgré le changement de folder. De  même, la vue reste bloquée sur un périmètre temporaire. </p>
+    
+    <p> <b>Le blocage permet de créer des liaisons entre n'importe quel  folder</b> (visualisation des tâches d'un folder, blocage de la vue  et changement de folder). Cela permet également de conserver  indéfiniment un périmètre 'tous les folders'. </p>
+    
+    <p> Lorsque la vue est débloquée, la liste des tâches est rafraîchie sur le folder en cours de visualisation. </p>
+      
+    <p>A noter qu'une <b>tâche est toujours crée dans le folder courant</b> et ce  même si la vue est bloquée et que la vue montre un autre folder.</p> 
+    
+    <h2 id="FolderTreeIcon"> Icone dans le folderTree </h2>
+    <img class="illustration" src="img/screenShot_taskmail_foldertree.png">
+    <p> Lors que la vue est bloquée, un <b>icône spécial dans le folderTree</b> permet de visualiser le folder en cours. </p>
+    
+    <h2 id="ViewTasksFolder"> Changement de vue sans changer de folder</h2>
+    <p> Il est possible de <b>changer le folder en cours de  visualisation</b> dans la liste des tâches sans changer de  folder et donc sans perdre de vue les messages en cours en  utilisant <span class="shortcut">menu contextuel du folderTree  / Voir les tâche de ce folder</span>. Cela permet de créer des    liens inter-folder.</p>
+        
+    <h1 id="QuickFilterBar"> Quick-filter-bar </h1>
+    <img class="illustration" src="img/screenshot_quickfilterbar.png">
+    <p> Il est possible de filtrer la liste des messages pour : </p>
+    <ul>
+      <li>afficher seulement les messages qui ont au moins un lienavec une tâche quelconque, </li>
+      <li>afficher seulement les messages qui ont un lien avec la (ou  les) tâches sélectionnée(s). Dans ce mode, si aucune tâche  n'est sélectionnée, tous les messages avec des liens sont  visualisés. La liste des messages est rafraîchie sur le  changement de tâche, il est possible de basculer entre une  visualisation des messages ou des discussions contenant les  messages. </li>
+    </ul>
+    
+    <p> Le mode sticky permet de conserver les filtres lors d'un  changement de folder. Lors que Thunderbird redémarre lesous-filtrage n'est pas restitué. </p>
+    
+    <h1 id="Moves"> Déplacement de tâches et messages </h1> <p> <b>Règle de base : Lorsqu'un message bouge, les tâches  bougent avec. L'inverse NON.</b> </p>
+    
+    <p> <u>Définition</u>: </p>
+    <ul>
+      <li>un lien est <b>direct</b> lorsque une tâche est liée à un message qui est dans le même folder que la tâche, </li>
+      <li>un lien est <b>indirect</b> lorsque une tâche est liée à un message qui est dans un autre folder que celui de la tâche. </li>
+    </ul>
+    
+    <h2 id="TaskMoves"> Déplacement de tâche </h2>
+    <p> On peut déplacer une tâche (ou plusieurs) dans un autre folder à l'aide de <span class="shortcut">menu Tasks &amp; Mails / Déplacer vers ...</span> ou d'un <span class="shortcut">drag &amp; drop</span>. </p>
+        
+    <p> Le <b>déplacement d'une tâche avec des liens est possible</b> et la tâche reste liée à ses messages. Néanmoins, les liens deviennent donc indirects. </p>
+      
+    <h2 id="MessageMoves"> Déplacement de messages </h2>
+    <p> Le déplacement d'un message, lorsqu'il est lié à des taches,  provoque le déplacement des taches qui lui sont liées et le  message reste donc lié aux tâches. Néanmoins, le déplacement  d'un message déplace avec lui les <b>tâches en liens direct et  uniquement elles</b>. Les tâches qui sont dans d'autres  folders restent où elles sont et demeurent liées aux messags que  l'on déplace. </p>
+    
+    <h2 id="Divers"> Divers </h2>
+    <p> La suppression d'un message, provoque la suppression des  tâches liées directement. Les tâches liées indirectement, elles,  ne sont pas impactées. A noter que lorsque les messages sont misdans la corbeille, les tâches suivent. </p>
+    
+    <p> La suppression d'une tâche n'impacte pas les messages. </p>
+    
+    <p> Le déplacement d'un folder conserve les tâches et liens cohérents. </p>
+    
+    <p> La suppression d'un folder provoque en cascade la suppression des taches associées. </p>
+    
+    <p> Le renommage de folder n'impacte pas les tâches. </p>
+    
+    <p> Il n'est pas possible d'annuler un déplacement de tâche. </p>
+    
+    <h1 id="Preferences"> Préférences </h1>
+    <img class="illustration" src="img/screenshot_taskmail_pref_states.png" width="350px">
+    <p>Il est possible de choisir quel bouton de la souris provoque <span class="shortcut">menu Aller / Aller au message suivant</span>.</p>
+    
+    <p>Il est possible de désactiver la notion de périmétre temporaire.</p>
+    
+    <p> La liste des états et le rapport de tâches sont modifiables  par l'utilisateur via les options du module. L'ordre des états  est modifiable. Attention à noter que la suppression d'un état  ne contrôle pas si l'état est utilisé. Il est impossible de  supprimer l'état 'fait'. Celui-ci peut être renommé mais il doit  garder sa signification. </p>
+    
+    <h1 id="TasksReport"> Rapport de tâches </h1>
+    <p> La génération du rapport de tâches génère un message avec toutes les tâches répondant aux filtres actifs et tri actif (vue arborescente ou plate). </p>
+    
+    <p> Le rapport peut être adapté dans les préférences de l'extension. Le templace est basé sur du source HTML dans lequel des mots clés sont remplacés par des valeurs. </p>
+    
+    <p> Le template est construit sur les informations suivantes : </p>
+    <ul>
+      <li>#TASK_TITLE#, #TASK_PRIO#, #TASK_STATE# et #TASK_DESC# sont remplacées par des informations élémentaires d'une tâche. </li>
+      <li>#TASK_CREATION_DATE#, #TASK_DUE_DATE# et #TASK_COMPLETION_DATE sont remplacées par les dates d'une tâche, </li>
+      <li>#FOLDER_NAME# est remplacé par le nom du folder. </li>
+    </ul>
+    <p> Le template contient des balises qui délimitent (début et fin comme en XHTML) les objets à afficher : </p>
+    <ul>
+      <li>#FOLDER# delimite un folder. Un folder est constitué de tâches et de sous folders. </li>
+      <li>#TASK# delimite une tâche. </li>
+      <li>#SUB_FOLDERS# sont les sous folders. </li>
+    </ul>
+    <p> Exemple de template avec les tâches en arborescence : </p>
+    <pre>Rapport hebdo
+    &lt;ul&gt; 
+    #FOLDER#
+    &lt;li&gt;#FOLDER_NAME#&lt;/li&gt;
+    &lt;ul&gt;
+    #TASK#&lt;li&gt;
+    #TASK_TITLE# (&lt;tt&gt;#TASK_PRIO#&lt;/tt&gt;) &lt;b&gt;#TASK_STATE#&lt;/b&gt;
+    #TASK_CREATION_DATE# &lt;u&gt;#TASK_DUE_DATE#&lt;/u&gt; #TASK_COMPLETION_DATE# 
+    &lt;i&gt;#TASK_DESC#&lt;/i&gt;
+    &lt;/li&gt;#TASK#
+    #SUB_FOLDERS#
+    &lt;/ul&gt; 
+    #FOLDER#
+    &lt;/ul&gt; 
+    Merci de prendre en compte.
+    </pre>
+    <p> Autre exemple de template avec toutes les tâches au même niveau : </p>
+    <pre>Rapport hebdo
+    &lt;ul&gt;
+    #FOLDER#
+    #TASK#&lt;li&gt;
+    #TASK_TITLE#(&lt;tt&gt;#TASK_PRIO#&lt;/tt&gt;)#TASK_STATE#
+    #TASK_DESC#
+    &lt;/li&gt;#TASK#
+    #SUB_FOLDERS#
+    #FOLDER#
+    &lt;/ul&gt;
+    Merci de prendre en compte.
+    </pre>
+    
+    <h1 id="Backups"> Sauvegarde </h1>
+    <p>Les tâches sont stockée dans une base de données sqlite. Cette base tasks.sqlite est présente, sur l'ordinateur, dans le répertoire thunderbid.user.home
+    <table>
+            <tr>
+                    <td>Sous <b>Windows XP</b></td>
+                    <td>elle est placée dans le répertoire <span style="font-family:monospace">[documents and settings\user]\application data\thunderbird\profiles\[user]\tasks.sqlite.</span></td>
+            </tr>
+            <tr>
+                    <td>Sous <b>Windows Seven</b></td>
+                    <td>elle est placée dans le répertoire <span style="font-family:monospace">[OS drive]\Users\[user]\AppData\Roaming\Thunderbird\Profiles\[user]\tasks.sqlite.</span></td>
+            </tr>
+    </table></p>
+    <p>Lors d'une mise à jour de l'extension, si un upgrade de la base est nécessaire, une sauvegarde est réalisée automatiquement dans le répertoire user.home (<span style="font-family:monospace">tasks.sqlite.backup.1</span>).</p>
+    <p>Une sauvegarde de la base peut être réalisée à l'aide de mozBackup version 1.4.8. </p>
+	</div>
+	<div id="footer" role="contentinfo" class="line txtcenter smaller mas">
+		<a href="../">Gilles ORSINI</a>
+	</div>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30461573-1']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+</body>
+</html>
