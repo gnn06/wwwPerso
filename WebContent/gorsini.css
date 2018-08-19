@@ -1,0 +1,149 @@
+/* CSS Document */
+body {
+  background-image:url(img/fond.png);
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+body, P {
+  font-family: Tahoma;
+  margin:0px;
+  padding:0px;
+  font-size: 15px;
+  color: #4b9fa7;
+}
+
+#container {
+  margin: 30px auto;
+  width:807px;
+}
+
+#header {
+  background-image: url(img/header.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 172px;;
+  margin-bottom:10px;
+}
+
+#left {
+  float:left;
+  width:169px;
+}
+
+#adresse {
+  margin-bottom:12px;
+}
+
+#adresse P {
+  padding-top:10px;
+}
+
+#adressetop {
+  background-image: url(img/adressetop.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 47px;
+  margin-top:2px;
+}
+
+#adressemiddle {
+  background-image: url(img/adressemiddle.jpg);
+  background-position: left top;
+  background-repeat: repeat-y; 
+  padding-left: 19px;
+  padding-bottom:2px;
+}
+
+#adressebottom {
+  background-image: url(img/adressebottom.jpg);
+  background-position: left top;
+  background-repeat: no-repeat; 
+  height: 19px;
+  margin-bottom:10px;
+}
+
+#adressemiddle p {
+  font-size: 11px;
+}
+
+IMG {
+  border: 0px;
+}
+
+#middle {
+  float:left;
+  width:628px;
+  margin-left:10px
+}
+
+#menu {
+  padding-left:3px;
+}
+
+#corpstop {
+  background-image: url(img/corpstop.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 16px;
+  margin-top:10px;
+}
+
+#corpsmiddle {
+  background-image: url(img/corpsmiddle.jpg);
+  background-position: left top;
+  background-repeat: repeat-y; 
+  padding-left: 19px;
+  padding-right:23px;
+  min-height: 350px;
+  text-align: justify;
+}
+
+#corpsbottom {
+  background-image: url(img/corpsbottom.jpg);
+  background-position: left top;
+  background-repeat: no-repeat; 
+  height: 19px;
+}
+
+#corpsmiddle P {
+  font-size: 15px;
+  padding-bottom:12px;
+}
+
+#corpsmiddle UL {
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-bottom:10px;
+}
+
+#corpsmiddle img.illustration {
+  float:left;
+  margin-right:12px;
+}
+
+DIV.ombre1 {
+  background: url(img/ombre.gif) right bottom no-repeat;
+  padding-left:5px;
+}
+
+DIV.ombre2 {
+  background: url(img/ombreBL.gif) bottom left no-repeat;
+}
+
+DIV.ombre3 {
+  background: url(img/ombreTR.gif) top right no-repeat;
+  padding:0 6px 6px 0;
+}
+
+DIV.ombre1, DIV.ombre2, DIV.ombre3 {
+  display:block;
+  float:left;
+}
+
+#footer {
+  clear:both;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 9px;
+}
