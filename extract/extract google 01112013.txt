@@ -1,0 +1,85 @@
+Extract Google le 01/11/2013
+
+accueil | gorsini.free.fr
+gorsini.free.fr/‎
+gilles orsini, chef de projet web j2ee à sophia antipolis.
+
+Mes Notes - accueil - Free
+gorsini.free.fr/?q=node‎
+gilles orsini, chef de projet web j2ee à sophia antipolis.
+
+english manual | gorsini.free.fr
+gorsini.free.fr/?q=node/18‎
+Tasks & Mail - User Manual2.3.1 - March 24 2012 General description This extension allows you to manage tasks with the possibility of linking these tasks to ...
+
+User account | gorsini.free.fr
+gorsini.free.fr/?q=user‎
+gilles orsini, chef de projet web j2ee à sophia antipolis.
+
+Tasks & Mails | gorsini.free.fr
+gorsini.free.fr/?q=node/8‎Traduire cette page
+Description Tasks management in a thunderbird extension where tasks are linked to emails. See all in one, emails and tasks (no more pain to synchronize a task ...
+
+Change log | gorsini.free.fr
+gorsini.free.fr/?q=node/12‎Traduire cette page
+Change log 2.3.1 Compatibility with thunderbird 14 creation date editable title column sortable add menu Help bug fix : refresh task list when changing folder 2.3 ...
+
+Problème Free et YouTube | gorsini.free.fr
+gorsini.free.fr/?q=node/20‎
+24 mars 2013 - En me basant sur tuto, j'ai installé, pour firefox, un addon (FoxyProxy) pour utiliser un proxy spécifiquement aux urls youtube, j'ai choisi le proxy ...
+
+OneNote au travail | gorsini.free.fr
+gorsini.free.fr/?q=node/24‎
+30 mars 2013 - Dans l'utilisation de OneNote au travail et donc derrière un proxy HTTP, il est nécessaire que, dans les options de connexions réseau ...
+
+komodo ide | gorsini.free.fr
+gorsini.free.fr/?q=node/13‎
+3 oct. 2013 - Je teste komodo ide pour le développement de 'folder plus' et ma première impression est très bonne. Le programme sait identifié le nom des ...
+
+Des outils de prise de notes | gorsini.free.fr
+gorsini.free.fr/?q=node/23‎
+27 mars 2013 - Mon avis sur certains outils : Google Keep. C'est de la prise de note simpliste avec import d'image. Le plus doit venir de l'inclusion dans ...
+
+Rappatriement des pages Tasks & Mails | gorsini.free.fr
+gorsini.free.fr/?q=node/14‎
+14 mars 2013 - Après plus de 2 semaines d'indispo des pages Tasks & Mails sous mozdev.org, je commence le rapatriement des pages sur le site perso.
+
+pdf acrchitect génére 2 Go de log en un mois | gorsini.free.fr
+gorsini.free.fr/?q=node/4‎
+3 mars 2013 - PDF architect (qui doit s'installer tout seul avec un lecteur de PDF) génére du log à go go (2 Go en un mois dans Documents and settings).
+
+Any.DO | gorsini.free.fr
+gorsini.free.fr/?q=node/19‎
+23 mars 2013 - J'ai jeté un coup d'œil très rapide à Any.DO. Malheureusement pas (encore) de version web, uniquement smartphone.
+
+Readability | gorsini.free.fr
+gorsini.free.fr/?q=node/21‎
+24 mars 2013 - J'ai testé rapidement 2 addons firefox qui reproduisent la fonctionnalité de "Lecteur" de safari sous iphone. Cela permet de lire une page, ...
+
+1° version stable de folderplus | gorsini.free.fr
+gorsini.free.fr/?q=node/16‎
+17 mars 2013 - Folder plus est publié dans sa première version stable !
+
+Construction page Blog dans le site | gorsini.free.fr
+gorsini.free.fr/?q=node/5‎
+3 mars 2013 - Avec drupal, la page de Blog est construite en créant une entrée de menu qui pointe la 'front page' native (qui liste les articles). La page par ...
+
+Outil pour créer des icônes | gorsini.free.fr
+gorsini.free.fr/?q=node/15‎
+16 mars 2013 - Je teste Greenfish Icon Editor Pro qui est gratuit pour les icônes de folder plus. Déjà le fait de passer par un outil dédié est pratique (plus ...
+
+Filtrage accès perso au site perso dans analytics | gorsini.free.fr
+gorsini.free.fr/?q=node/17‎
+20 mars 2013 - Le filtrage par IP appelante est en place dans analytics (admin > Filtres). L'IP récupérée sur whatismyipaddress.com était bien la bonne pour ...
+
+User account | gorsini.free.fr
+gorsini.free.fr/?q=user/password‎
+gilles orsini, chef de projet web j2ee à sophia antipolis.
+
+Publication de la 1° version de Folder Plus | gorsini.free.fr
+gorsini.free.fr/?q=node/7‎
+19 févr. 2013 - Folder plus est maintenant dispo dans sa 1° version sur mozilla.org.
+
+2 - accueil - Free
+gorsini.free.fr/?q=node&page=1‎
+3 mars 2013 - Avec drupal, la page de Blog est construite en créant une entrée de menu qui pointe la 'front page' native (qui liste les articles). La page par ...
