@@ -1,6 +1,0 @@
-RedirectMatch permanent ^/patisserie/$ http://www.patisserie-saint-michel.com/
-
-# Les redirection par RewriteEngine sont KO chez free
-# redirection à l'aide de index.php
-
-PHP 1
